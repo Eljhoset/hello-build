@@ -4,6 +4,10 @@ on:
   release:
     types: [published]
 
+env:
+  REGISTRY: docker.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
