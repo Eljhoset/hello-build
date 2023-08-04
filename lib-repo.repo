@@ -1,0 +1,5 @@
+[lib-repo]
+name=Repo for libraries
+baseurl=http://server/yum/lib-repo/
+gpgcheck=0
+metadata_expire=0
