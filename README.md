@@ -3,7 +3,7 @@ This image is designed to automate the process of building RPM packages and sour
 
 ## Build Image
 ```bash
-docker build -t hello/build .
+docker build --add-host server:127.0.0.1 -t hello/build .
 ```
 ## Usage
 
@@ -11,7 +11,7 @@ docker build -t hello/build .
 docker run --cap-add=SYS_ADMIN -it --rm \
          -v /project:/mnt \
          -w /mnt \
-         --add-host server:127.0.0.1 hello/build \
+         hello/build \
          -r epel-8-x86_64 \
          -o /mnt/rpm \
          -s /mnt/srpm \

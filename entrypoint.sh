@@ -8,7 +8,7 @@ function display_usage {
 MOCK_CONFIG="epel-8-x86_64"
 RPM_FOLDER="./rpm"
 SRPM_FOLDER="./srpm"
-REPO_HOST="http://server"
+REPO_HOST="http://localhost"
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]; do
