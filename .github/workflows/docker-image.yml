@@ -36,4 +36,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          add-host: server/127.0.0.1
+          add-hosts: server/127.0.0.1
