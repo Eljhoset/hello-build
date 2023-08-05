@@ -61,10 +61,6 @@ for SRC_RPM_FILE in "$@"; do
         # Extract the name of the package from the .src.rpm filename
         PACKAGE_NAME=$(rpm -qp --queryformat '%{NAME}' "$FILE")
 
-        # Install the build dependencies using mock
-        mock -r "$MOCK_CONFIG" --init
-        mock -r "$MOCK_CONFIG" --install "$PACKAGE_NAME" -y
-
         # Rebuild the RPM package using mock
         mock -r "$MOCK_CONFIG" --rebuild "$FILE"
 
